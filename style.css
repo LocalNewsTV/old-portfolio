@@ -1,0 +1,145 @@
+/* Default settings for all elements */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: lightblue;
+    color: white;
+}
+/* Navbar stylings  */
+.navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    background: slategray;
+    width: 100%;
+    height: 6%;
+    border-bottom: 1px solid black;
+    justify-content: left;
+    align-items: center;
+    background: rgb(59, 59, 56);
+    color: white;
+    overflow: hidden;
+}
+.bb {
+    border: 1px solid black;
+}
+.navbar .navUrl{
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+}
+.navbar a{
+    margin: 10px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.full {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+/* Hero section of the page, the landing */
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: darkslategray;
+}
+.hero, p{
+    margin: 0;
+}
+
+.about{
+    background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bgg{background-color:rgba(59, 59, 56, .9)}
+
+#aboutSection{
+    height: 80%;
+    width: 80%;
+    margin-top: 5px;
+    /* background-color: rgba(255, 0, 0, .3); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#aboutMain h1{
+    padding: none;
+    margin-bottom: 0;
+    padding: 2px 5px;
+}
+#aboutSection .left{
+    width: 45%;
+    height: 100%;
+    margin-right: 20px;
+    padding-left: 25px;
+}
+#aboutSection .right{
+    background-color: yellow;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start
+}
+#aboutSection .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 20px;
+    height: auto;
+}
+#aboutSection .top p {margin: 10px 0 0 0;}
+
+#aboutSection .bottom {
+    width: 100%;
+    height: 20%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background: slategray;
+    width: 100%;
+    height: 6vh;
+    border-top: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background: rgb(59, 59, 56);
+    color: white;
+    overflow: hidden;
+}
+
+#projects{
+    background-color: rosybrown;
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {width: 50px;}
+  /* Track */
+  ::-webkit-scrollbar-track {border-radius: 10px;}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: url(images/IconEmil.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body {overflow: overlay;} /*allows the content to spill into the area reserved for the scrollbar*/

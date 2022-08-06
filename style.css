@@ -6,7 +6,9 @@ body {
     background: lightblue;
     color: white;
 }
-/* Navbar stylings  */
+/***************************************************
+    Beginnning of Navbar section
+***************************************************/
 .navbar{
     position: fixed;
     z-index: 1;
@@ -40,12 +42,14 @@ body {
 }
 
 .full {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid black;
 }
-/* Hero section of the page, the landing */
+/***************************************************
+    Hero section of Portfolio
+***************************************************/
 .hero{
     display: flex;
     flex-direction: column;
@@ -57,8 +61,11 @@ body {
 .hero, p{
     margin: 0;
 }
-
+/***************************************************
+Beginning of About section of Portfolio
+***************************************************/
 .about{
+    height: 100vh;
     background-color: royalblue;
     display: flex;
     flex-direction: column;
@@ -75,7 +82,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 #aboutMain h1{
     padding: none;
@@ -86,7 +92,7 @@ body {
     width: 45%;
     height: 100%;
     margin-right: 20px;
-    padding-left: 25px;
+    padding: 0 25px 25px 25px;
 }
 #aboutSection .right{
     background-color: yellow;
@@ -95,7 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start
+    align-items: center;
 }
 #aboutSection .top{
     display: flex;
@@ -111,8 +117,74 @@ body {
 #aboutSection .bottom {
     width: 100%;
     height: 20%;
+    text-align: center;
+}
+/***************************************************
+    Beginning of Projects Section
+***************************************************/
+#projects{
+    padding-top: 6vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+#projects h1{
+    padding: none;
+    margin-bottom: 0;
+    padding: 2px 5px;
+    color:black;
 }
 
+#projectsBody {
+    height: auto;
+    object-fit: contain;
+    padding: 2rem;
+    width: 75%;
+    margin: 15px 0;
+    background-color: rgba(255, 0, 0, .3);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.projectCard{
+    width: 28%;
+    height: auto;
+    padding: 15px;
+    border: 2px solid black;
+    margin: 10px;
+    background: tan;
+    color: black;
+}
+.projectCard img{
+    margin: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projectCard h2{
+    margin: 5px 0;
+}
+.projectCard p{
+    margin-bottom: 10px;
+}
+.projectCard button {
+    align-self: right;
+}
+
+/***************************************************
+    Beginning of Footer section
+***************************************************/
 footer{
     display: flex;
     flex-direction: row;
@@ -131,7 +203,9 @@ footer{
     background-color: rosybrown;
 }
 
-
+/***************************************************
+    Scrollbar CSS
+***************************************************/
 /* Scrollbar Styling */
 ::-webkit-scrollbar {width: 50px;}
   /* Track */

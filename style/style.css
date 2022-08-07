@@ -68,7 +68,7 @@ body {
     justify-content: center;
     color: white;
     background-color: darkslategray;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -95,7 +95,7 @@ Beginning of About section of Portfolio
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -155,7 +155,7 @@ Beginning of About section of Portfolio
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -229,7 +229,7 @@ Beginning of About section of Portfolio
 }
 #resume{
     height: 100vh;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -249,7 +249,7 @@ Beginning of About section of Portfolio
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(images/background2.webp);
+    background-image: url(../images/background2.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -311,7 +311,7 @@ footer{
   ::-webkit-scrollbar-track {border-radius: 10px;}
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: url(images/IconEmil.png); 
+    background: url(../images/IconEmil.png); 
     background-position: center;
     background-repeat: no-repeat;
   }

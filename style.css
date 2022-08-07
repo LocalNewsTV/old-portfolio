@@ -159,14 +159,19 @@ Beginning of About section of Portfolio
     background-repeat: no-repeat;
     background-size: cover;
 }
-#projects h1{
+/* #projects h1{
     background-color: rosybrown;
     padding: none;
     margin-bottom: 0;
     padding: 2px 5px;
     color:black;
+} */
+.buttonCont{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end
 }
-
 #projectsBody {
     height: auto;
     object-fit: contain;
@@ -243,20 +248,43 @@ Beginning of About section of Portfolio
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-image: url(images/background2.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
+#contact h1{
+    padding: 10px;
+    background-color:rgba(59, 59, 56, .8);
+}
 #contactBody{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-width: 80%;
-    min-height: 80%;
-    background-color:rgba(59, 59, 56, .7);
+    min-width: 45%;
+    min-height: 50%;
+    background-color:rgba(59, 59, 56, .8);
 }
-
+.square{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin-right: 10px;
+    background-color:rgba(255, 0, 0, .3)
+}
+#socialLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#socialLinks a {
+    padding: 5px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.link{font-size: 14px;}
 /***************************************************
     Beginning of Footer section
 ***************************************************/
@@ -288,3 +316,8 @@ footer{
     background-repeat: no-repeat;
   }
   body {overflow: overlay;} /*allows the content to spill into the area reserved for the scrollbar*/
+
+  button:hover {
+    background: black;
+    color: white;
+  }

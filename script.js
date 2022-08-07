@@ -40,8 +40,11 @@ const projectCardMaker = (project) => {
     $(button).attr("data-target", "projectModal");
     $(button).on('click', showProject.bind(this, project));
     $(button).html("More");
-    $(cardBody).append(button);
-    $(cardMain).append(card);
+    const buttonCont = newE('div');
+    $(buttonCont).addClass('buttonCont');
+    $(buttonCont).append(button);
+    // $(cardBody).append(button);
+    $(cardMain).append(card, buttonCont);
     return cardMain;
 }
 
@@ -54,7 +57,10 @@ const navBarTime = () => {
         $('#time').html(date.toLocaleTimeString())
     }, 100);
 }
-
+const goToEmail = () => {
+    preventDefault();
+    
+}
 $(document).ready(()=>{
     projects.forEach((project) => {
         $('#projectsBody').append(projectCardMaker(project));

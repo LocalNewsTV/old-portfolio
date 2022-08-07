@@ -6,9 +6,12 @@ body {
     background: lightblue;
     color: white;
 }
+.bb {border: 1px solid black;}
+
 /***************************************************
     Beginnning of Navbar section
 ***************************************************/
+#time{padding-right: 40px;}
 .navbar{
     position: fixed;
     z-index: 1;
@@ -20,32 +23,40 @@ body {
     width: 100%;
     height: 6%;
     border-bottom: 1px solid black;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     background: rgb(59, 59, 56);
     color: white;
     overflow: hidden;
 }
-.bb {
-    border: 1px solid black;
-}
 .navbar .navUrl{
     display: flex;
     flex-direction: row;
     padding-left: 15px;
+    align-items: center;
 }
-.navbar a{
+.navbar div a{
     margin: 10px;
     color: white;
     font-style: normal;
     text-decoration: none;
 }
-
+.pt{
+    padding-top: 4%;
+}
 .full {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid black;
+}
+.navOpt:hover{
+    color: green;
+    transition: 0.5s ease-in;
+}
+#title:hover{
+    color:royalblue;
+    transition: 0.5s ease-in;
 }
 /***************************************************
     Hero section of Portfolio
@@ -57,20 +68,36 @@ body {
     justify-content: center;
     color: white;
     background-color: darkslategray;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.hero, p{
-    margin: 0;
+#heroContent{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(59, 59, 56, .5);
+    border: 1px solid black;
 }
+#heroContent p, #heroContent h1{
+    margin: 10px;
+}
+
 /***************************************************
 Beginning of About section of Portfolio
 ***************************************************/
 .about{
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 15px;
     background-color: royalblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .bgg{background-color:rgba(59, 59, 56, .9)}
 
@@ -85,7 +112,7 @@ Beginning of About section of Portfolio
 }
 #aboutMain h1{
     padding: none;
-    margin-bottom: 0;
+    margin: 0;
     padding: 2px 5px;
 }
 #aboutSection .left{
@@ -123,15 +150,17 @@ Beginning of About section of Portfolio
     Beginning of Projects Section
 ***************************************************/
 #projects{
-    padding-top: 6vh;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow: auto;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #projects h1{
+    background-color: rosybrown;
     padding: none;
     margin-bottom: 0;
     padding: 2px 5px;
@@ -149,11 +178,8 @@ Beginning of About section of Portfolio
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
-
-
 .projectCard{
     width: 28%;
     height: auto;
@@ -162,6 +188,7 @@ Beginning of About section of Portfolio
     margin: 10px;
     background: tan;
     color: black;
+    overflow: hidden;
 }
 .projectCard img{
     margin: auto;
@@ -179,7 +206,55 @@ Beginning of About section of Portfolio
     margin-bottom: 10px;
 }
 .projectCard button {
-    align-self: right;
+    border: 1px solid black;
+    background-color: rgba(59, 59, 56, .9);
+    color: white;
+    width: 20%;
+    height: 2rem;
+}
+/***************************************************
+    Beginning of Resume Section
+***************************************************/
+#resume, #resumeBody{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    width: auto;
+    background-color: burlywood;
+}
+#resume{
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#resumeBody{
+    justify-content: center;
+    height: 80%;
+    width: 85%;
+    background-color: rgba(59, 59, 56, .7);
+}
+/***************************************************
+    Beginning of Contact Section
+***************************************************/
+#contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/background2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contactBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    min-height: 80%;
+    background-color:rgba(59, 59, 56, .7);
 }
 
 /***************************************************
@@ -197,10 +272,6 @@ footer{
     background: rgb(59, 59, 56);
     color: white;
     overflow: hidden;
-}
-
-#projects{
-    background-color: rosybrown;
 }
 
 /***************************************************

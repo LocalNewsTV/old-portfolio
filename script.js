@@ -38,11 +38,31 @@ const projectCardMaker = (project) => {
     const button = newE('button');
     $(button).attr("data-toggle", "modal");
     $(button).attr("data-target", "projectModal");
-    // $(button).on('click', showProject.bind(this, project));
+    $(button).on('click', showProject.bind(this, project));
     $(button).html("More");
     $(cardBody).append(button);
     $(cardMain).append(card);
     return cardMain;
 }
 
-$(document).ready(()=>{$('#projectsBody').append(projectCardMaker(projects[0]));$('#projectsBody').append(projectCardMaker(projects[0]));$('#projectsBody').append(projectCardMaker(projects[0]));$('#projectsBody').append(projectCardMaker(projects[0]));$('#projectsBody').append(projectCardMaker(projects[0]));})
+const showProject = (projectObj) => {
+    console.log(projectObj.id);
+}
+const navBarTime = () => {
+    setInterval(()=>{
+        const date = new Date();
+        $('#time').html(date.toLocaleTimeString())
+    }, 100);
+}
+
+$(document).ready(()=>{
+    projects.forEach((project) => {
+        $('#projectsBody').append(projectCardMaker(project));
+    })
+    navBarTime();
+});
+// $('.navOpt').on("click", event => {
+//     console.log(event.target.id)
+//     $('.navOpt').css('color', 'inherit');
+//     $(`#${event.target.id}`).css('color', 'red');
+// });

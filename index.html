@@ -4,28 +4,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Logan</title>
+    <title>Matthew Logan, A Portfolio</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- NavBar section  -->
     <div class="navbar" role="navigation">
-      <h1><a href="#hero">Placeholder Title</a></h1>
       <div class="navUrl">
-        <a href="#aboutMain">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#">Third</a>
-        <a href="#">Contact</a>
+      <h1><a href="#hero" id="title">Matthew Logan</a></h1>
+        <a href="#hero" class="navOpt" id="navTop">Top</a>
+        <a href="#aboutMain" class="navOpt" id="navAbout">About</a>
+        <a href="#projects" class="navOpt" id="navProj">Projects</a>
+        <a href="#resume" class="navOpt" id="navResume">Curriculum Vitae</a>
+        <a href="#contact" class="navOpt" id="navContact">Contact</a>
       </div>
+      <div>
+        <p id="time"></p>
+      </div>
+
     </div>
     <div>
       <!-- Hero Section  -->
-      <div id="hero" class="hero full">
-        <h1 id="header">Placeholder Header</h1>
-        <p id="hook">placeholder text</p>
+      <div id="hero" class="hero full pt">
+        <div id="heroContent">
+          <h1 id="heroHeader">Matthew Logan</h1>
+          <p id="hook">A Portfolio Experience</p>
+        </div>
       </div>
       <!-- About Section, has three content boxes -->
-      <div id="aboutMain" class="about full">
+      <div id="aboutMain" class="about pt">
           <h1 class="bgg bb">About Me</h1>
         <div id="aboutSection">
            <!--Main content box-->
@@ -40,8 +47,8 @@
           <div class="right">
             <!--Reserved for Headshot + caption-->
             <div class="top bgg bb">
-                <div id="headshot">
-                <img src="http://www.fillmurray.com/300/500" alt="Fill Murray">
+              <div id="headshot">
+                <img src="images/myself.webp" height="500" alt="Fill Murray">
               </div>
                 <p id="aboutCaption">Fill Murray Baby</p>
             </div>
@@ -54,12 +61,36 @@
       </div>
       <!-- End of About Section -->
       <!-- Start of Projects Section -->
-      <div id="projects" class="full">
+      <div id="projects" class="pt">
         <h1>Projects!</h1>
-        <div id="projectsBody">
-        </div>   
+        <div id="projectsBody"></div>   
       </div>
-      <footer><p>C by Me</p></footer>
+      <!-- End of Projects Section -->
+      <!-- Start of Resume Section -->
+      <div id="resume" class="full bb pt">
+        <h1 class="bgg bb">Curriculum Vitae</h1>
+        <div id="resumeBody" class="bb">
+          <h1>Shrek's Swamp</h1>
+          <p>Welome</p>
+        </div>
+      </div>
+      <!-- End of Resume Section -->
+      <!-- Start of Contact Section -->
+      <div id="contact" class="pt">
+        <h1 class="bb bgg">Contact Me</h1>
+        <div id="contactBody" class="bgg">
+          <h3>Hello</h3>
+          <p>Sailor</p>
+        </div>
+      </div>
+      <!-- End of Contact Section -->
+      <!-- Start of Footer Section -->
+      <footer>
+        <p>Portfolio created by me, all images are mine unless otherwise stated</p>
+      </footer>
+      <!-- End of Footer Section -->
+      <!-- Start of Modal Section -->
+
     </div>
     <script src="content.js"></script>
 	  <script src="script.js"></script>

@@ -32,7 +32,7 @@
         {
             id: "weatherApp",
             title: "Weather Application",
-            sourceImage: "http://www.fillmurray.com/302/306",
+            sourceImage: "images/WeatherApp.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/WeatherApp",
@@ -43,7 +43,7 @@
         },
         {
             id: "fakeStore",
-            title: "Fake Storefront Final Project",
+            title: "128 Final Project",
             sourceImage: "images/128Final.png",
             description: "",
             writeUp: {
@@ -68,7 +68,7 @@
         {
             id: "senseWeather",
             title: "Sense Hat Weather",
-            sourceImage: "http://www.fillmurray.com/309/300",
+            sourceImage: "images/piWeather.png",
             description: "",
             writeUp: {
                 url: "n/a",
@@ -80,7 +80,7 @@
         {
             id: "ticTacToe",
             title: "Tic Tac Toe",
-            sourceImage: "http://www.fillmurray.com/313/300",
+            sourceImage: "images/ttt.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/TicTacToe",
@@ -95,7 +95,7 @@
             sourceImage: "http://www.fillmurray.com/377/300",
             description: "",
                 writeUp: {
-                    url: "n/a",
+                    url: "google.ca",
                     github: "https://github.com/LocalNewsTV/",
                     tools: "So many tools of different kinds",
                     summary: "This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Checkmate... Life finds a way. Do you have any idea how long it takes those cups to decompose. Must go faster. Did he just throw my cat out of the window? What do they got in there? King Kong?"

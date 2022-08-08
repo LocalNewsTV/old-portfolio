@@ -59,10 +59,15 @@ const showProject = (projectObj) => {
     $('.modalDescription').html(projectObj.writeUp.summary);
     $('.modalProjectSkills').html(projectObj.writeUp.tools);
     $('.modalProjectTitle').html(projectObj.title);
-    if(projectObj.writeUp.url == 'n/a')
+    $('.modalImage').attr('src',projectObj.sourceImage)
+    if(projectObj.writeUp.url == 'n/a'){
         $('#modalDemo').removeAttr('href');
-    else
+        $('#modalDemo').addClass('noLink');
+    }
+    else{
         $('#modalDemo').attr('href', projectObj.writeUp.url);
+        $('#modalDemo').removeClass('noLink');
+    }
     $('#modalGit').attr('href', projectObj.writeUp.github);
 }
 /******************************************************************************* 
@@ -93,6 +98,7 @@ const setContacts = () => {
     $('#github').attr('href', contact.github);
     $('#linkedin').attr('href', contact.linkedin);
     $('#emailadd').attr('href', `mailto:${contact.email}`);
+    // $('#resumeAttach').attr('href', 'docs/resume.pdf');
 }
 
 const updateWeather = () => {
@@ -123,10 +129,11 @@ const updateWeather = () => {
     setInterval(fillWeatherInfo, fiveMinutes);
 }
 const setBackground = () => {
-    if(parseInt(window.innerWidth) > 550/*pixels*/){
+    pixelWidth = 500
+    if(parseInt(window.innerWidth) > pixelWidth){
         $('#background-video').css('background', 'url(images/bgVid.m4v)')
         $('#background-video').attr("src", 'images/bgVid.m4v')
-        $('#projects').css('background-image', 'url(images/background3.jpg)');
+        $('.about').css('background-image', 'url(images/background3.jpg)');
         $('#contact').css('background-image', 'url(images/background2.webp)')
     }
 }
@@ -156,3 +163,10 @@ $(window).on("click", function(event) {
 });
 
 $('#contactSquare').on("click", circle);
+$('.projectTitle').on("click", () => {
+    let set = $('.projectCard').css('display') == 'block' ? "none" : 'block';
+    let bgColor = $('.projectCard').css('display') == 'block'? "green" : ''; 
+    $('.projectCard').css('display', set);
+    $('.projectTitle').css('background-color', bgColor)
+});
+

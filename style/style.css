@@ -1,16 +1,43 @@
 /* Default settings for all elements */
+
+
 body {
     font-family:Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background: lightblue;
     color: white;
 }
 .bb {border: 1px solid black;}
-
+.bgg{background-color:rgba(59, 59, 56, .9)}
+#background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color:darkcyan;
+}
+#background-video { 
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: fixed;  /* bg slides without this */
+    object-fit: fill; /* lets background fit screen instead of cropping out. */
+    left: 0;  
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 /***************************************************
     Beginnning of Navbar section
 ***************************************************/
+#timeBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 #time{padding-right: 40px;}
 .navbar{
     position: fixed;
@@ -91,21 +118,14 @@ Beginning of About section of Portfolio
 .about{
     min-height: 100vh;
     padding-bottom: 15px;
-    background-color: royalblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-.bgg{background-color:rgba(59, 59, 56, .9)}
-
 #aboutSection{
     height: 80%;
     width: 80%;
     margin-top: 5px;
-    /* background-color: rgba(255, 0, 0, .3); */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -151,21 +171,20 @@ Beginning of About section of Portfolio
 ***************************************************/
 #projects{
     min-height: 100vh;
+    border-top: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    background-image: url(../images/background.jpg);
+    background-color:lightgreen;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* #projects h1{
-    background-color: rosybrown;
+#projects h1{
     padding: none;
     margin-bottom: 0;
     padding: 2px 5px;
-    color:black;
-} */
+}
 .buttonCont{
     display:flex;
     flex-direction: row;
@@ -184,6 +203,7 @@ Beginning of About section of Portfolio
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-content: center;
 }
 .projectCard{
     width: 28%;
@@ -225,13 +245,9 @@ Beginning of About section of Portfolio
     align-items: center;
     flex-direction: column; 
     width: auto;
-    background-color: burlywood;
 }
 #resume{
     height: 100vh;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #resumeBody{
@@ -249,7 +265,7 @@ Beginning of About section of Portfolio
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../images/background2.webp);
+    background-color:skyblue;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -311,7 +327,7 @@ footer{
   ::-webkit-scrollbar-track {border-radius: 10px;}
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: url(../images/IconEmil.png); 
+    background: none; 
     background-position: center;
     background-repeat: no-repeat;
   }

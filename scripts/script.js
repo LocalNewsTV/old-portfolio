@@ -8,7 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
+/******************************************************************************* 
+ * @param {Object} project - Object containing the information for each project  
+ * @return {Object} - returns card object to append to the Dom
+ * @description - Creates project cards to be used on the dom
+********************************************************************************/
 const projectCardMaker = (project) => {
     const cardMain = newE('div');
     $(cardMain).addClass('projectCard');
@@ -47,28 +51,85 @@ const projectCardMaker = (project) => {
     $(cardMain).append(card, buttonCont);
     return cardMain;
 }
-
+/******************************************************************************* 
+ * @param {Object} projectObj - Object containing the information for each project
+ * @description - Appends information of a given type to the modal
+********************************************************************************/
 const showProject = (projectObj) => {
     console.log(projectObj.id);
 }
-const navBarTime = () => {
-    setInterval(()=>{
+/******************************************************************************* 
+ * @description - runs an interval updating the clock displayed in PDT 
+********************************************************************************/
+const startNavBarTime = () => {
+    const theTime = () => {
         const date = new Date();
-        $('#time').html(date.toLocaleTimeString())
-    }, 100);
+        const option = { timeZone: contact.timeZone, timeZoneName: 'short'}
+        $('#time').html(date.toLocaleTimeString('en-US', option));
+    }
+    theTime();
+    setInterval(theTime, 1000);
 }
-const goToEmail = () => {
-    preventDefault();
-    
-}
-$(document).ready(()=>{
+/******************************************************************************* 
+ * @description - Iterates through each element in the projects array and appends the 
+ * returned value from projectCardMaker() to the Projects Body
+********************************************************************************/
+const loadProjects = () => {
     projects.forEach((project) => {
         $('#projectsBody').append(projectCardMaker(project));
-    })
-    navBarTime();
+    });
+}
+/******************************************************************************* 
+ * @description - sets the relevant links to the Contact section
+********************************************************************************/
+const setContacts = () => {
+    $('#github').attr('href', contact.github);
+    $('#linkedin').attr('href', contact.linkedin);
+    $('#emailadd').attr('href', `mailto:${contact.email}`);
+}
+
+const updateWeather = () => {
+    const fillWeatherInfo = async () => {
+        const getWeather = async () => {
+            try{
+                const key = '7d98db344ac643c69ab184637222007';
+                const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${contact.location}&aqi=no`;
+                const responseURL = await fetch(url);
+                response = responseURL.json();
+                return response;
+            }
+            catch (ex) {
+                return "";
+            }
+        }
+        const weather = await getWeather();
+        console.log(weather);
+        if(weather != ""){
+            const image = newE('img')
+            image.src = 'http:' + weather.current.condition.icon;
+            $('#temp').html(weather.current.temp_c + '°C');
+            $('#icon').html(image)
+        }
+    }
+    const fiveMinutes = 300000
+    fillWeatherInfo();
+    setInterval(fillWeatherInfo, fiveMinutes);
+}
+const setBackground = () => {
+    if(parseInt(window.innerWidth) > 550){
+        $('#background-video').css('background', 'url(images/bgVid.m4v)')
+        $('#background-video').attr("src", 'images/bgVid.m4v')
+        $('#projects').css('background-image', 'url(images/background3.jpg)');
+        $('#contact').css('background-image', 'url(images/background2.webp)')
+    }
+}
+/******************************************************************************* 
+ * 
+********************************************************************************/
+$(document).ready(()=>{
+    updateWeather();
+    setContacts();
+    loadProjects();
+    startNavBarTime();
+    setBackground();
 });
-// $('.navOpt').on("click", event => {
-//     console.log(event.target.id)
-//     $('.navOpt').css('color', 'inherit');
-//     $(`#${event.target.id}`).css('color', 'red');
-// });

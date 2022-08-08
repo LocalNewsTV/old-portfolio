@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
+    <!-- Background Video containers  -->
+    <div id="background">
+      <video id="background-video"autoplay loop muted>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
     <!-- NavBar section  -->
     <div class="navbar" role="navigation">
       <div class="navUrl">
@@ -19,12 +25,13 @@
         <a href="#resume" class="navOpt" id="navResume">Curriculum Vitae</a>
         <a href="#contact" class="navOpt" id="navContact">Contact</a>
       </div>
-      <div>
+      <div id="timeBox">
+        <div><p id="temp"></p></div>
+        <div id="icon"></div>
         <p id="time"></p>
       </div>
 
     </div>
-    <div>
       <!-- Hero Section  -->
       <div id="hero" class="hero full pt">
         <div id="heroContent">
@@ -63,7 +70,7 @@
       <!-- End of About Section -->
       <!-- Start of Projects Section -->
       <div id="projects" class="pt">
-        <h1>Projects!</h1>
+        <h1 class="bgg bb">Projects!</h1>
         <div id="projectsBody"></div>   
       </div>
       <!-- End of Projects Section -->
@@ -82,9 +89,9 @@
         <div id="contactBody" class="bb">
           <div id="contactSquare" class="square"></div>
           <div id="socialLinks">
-              <a href="https://github.com/LocalNewsTV" rel="external"><i class="bi bi-github"></i><span class="link"> LocalNewsTV</span></a>
-              <a href="https://www.linkedin.com/in/logan-matthew/" rel="external"><i class="bi bi-linkedin"></i><span class="link"> Matthew Logan</span></a>
-              <a href="mailto:loganmatthewr@gmail.com" rel="external"><i class="bi bi-envelope"></i><span class="link"> loganmatthewr@gmail.com</span></a>
+              <a href="" rel="external" id="github"><i class="bi bi-github"></i><span class="link"> LocalNewsTV</span></a>
+              <a href="" rel="external" id="linkedin"><i class="bi bi-linkedin"></i><span class="link"> Matthew Logan</span></a>
+              <a href="" rel="external" id="emailadd"><i class="bi bi-envelope"></i><span class="link"> loganmatthewr@gmail.com</span></a>
           </div>
         </div>
       </div>
@@ -96,8 +103,8 @@
       <!-- End of Footer Section -->
       <!-- Start of Modal Section -->
 
-    </div>
     <script src="scripts/projects.js"></script>
 	  <script src="scripts/script.js"></script>
+    <script src="scripts/portfolioContent.js"></script>
   </body>
 </html>

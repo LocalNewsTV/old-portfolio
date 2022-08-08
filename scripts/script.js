@@ -93,7 +93,7 @@ const updateWeather = () => {
         const getWeather = async () => {
             try{
                 const key = '7d98db344ac643c69ab184637222007';
-                const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${contact.location}&aqi=no`;
+                const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${contact.location}&aqi=no`;
                 const responseURL = await fetch(url);
                 response = responseURL.json();
                 return response;

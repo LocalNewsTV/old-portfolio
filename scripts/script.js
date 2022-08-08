@@ -40,8 +40,6 @@ const projectCardMaker = (project) => {
     $(cardBody).append(cardText);
 
     const button = newE('button');
-    $(button).attr("data-toggle", "modal");
-    $(button).attr("data-target", "projectModal");
     $(button).on('click', showProject.bind(this, project));
     $(button).html("More");
     const buttonCont = newE('div');
@@ -56,7 +54,7 @@ const projectCardMaker = (project) => {
  * @description - Appends information of a given type to the modal
 ********************************************************************************/
 const showProject = (projectObj) => {
-    console.log(projectObj.id);
+    $('#myModal').css("display","block");
 }
 /******************************************************************************* 
  * @description - runs an interval updating the clock displayed in PDT 
@@ -103,7 +101,6 @@ const updateWeather = () => {
             }
         }
         const weather = await getWeather();
-        console.log(weather);
         if(weather != ""){
             const image = newE('img')
             image.src = 'http:' + weather.current.condition.icon;
@@ -132,4 +129,10 @@ $(document).ready(()=>{
     loadProjects();
     startNavBarTime();
     setBackground();
+});
+
+$('.close').on("click",()=>{$('#myModal').css("display", "none")})
+$(window).on("click", function(event) {
+    if (event.target.id == 'myModal')
+        $('#myModal').css("display", "none");
 });

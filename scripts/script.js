@@ -22,6 +22,7 @@ const projectCardMaker = (project) => {
     $(card).addClass('content');
     
     const imageContainer = newE('div');
+    $(imageContainer).addClass('imgCont')
     const cardImage = newE('img');
     cardImage.src = project.sourceImage;
     $(imageContainer).append(cardImage);
@@ -55,6 +56,14 @@ const projectCardMaker = (project) => {
 ********************************************************************************/
 const showProject = (projectObj) => {
     $('#myModal').css("display","block");
+    $('.modalDescription').html(projectObj.writeUp.summary);
+    $('.modalProjectSkills').html(projectObj.writeUp.tools);
+    $('.modalProjectTitle').html(projectObj.title);
+    if(projectObj.writeUp.url == 'n/a')
+        $('#modalDemo').removeAttr('href');
+    else
+        $('#modalDemo').attr('href', projectObj.writeUp.url);
+    $('#modalGit').attr('href', projectObj.writeUp.github);
 }
 /******************************************************************************* 
  * @description - runs an interval updating the clock displayed in PDT 
@@ -109,16 +118,24 @@ const updateWeather = () => {
         }
     }
     const fiveMinutes = 300000
+    $('#location').html(contact.location + ': ')
     fillWeatherInfo();
     setInterval(fillWeatherInfo, fiveMinutes);
 }
 const setBackground = () => {
-    if(parseInt(window.innerWidth) > 550){
+    if(parseInt(window.innerWidth) > 550/*pixels*/){
         $('#background-video').css('background', 'url(images/bgVid.m4v)')
         $('#background-video').attr("src", 'images/bgVid.m4v')
         $('#projects').css('background-image', 'url(images/background3.jpg)');
         $('#contact').css('background-image', 'url(images/background2.webp)')
     }
+}
+
+const circle = () => {
+    const border = $('#contactSquare').css('border-radius');
+    let size;
+    size = border == "50px" ? size = 0 : size = 50;
+    $('#contactSquare').css("border-radius", size);
 }
 /******************************************************************************* 
  * 
@@ -132,7 +149,10 @@ $(document).ready(()=>{
 });
 
 $('.close').on("click",()=>{$('#myModal').css("display", "none")})
+
 $(window).on("click", function(event) {
     if (event.target.id == 'myModal')
         $('#myModal').css("display", "none");
 });
+
+$('#contactSquare').on("click", circle);

@@ -20,27 +20,32 @@
     <div class="navbar" role="navigation">
       <div class="navUrl">
         <h1><a href="#hero" id="title">Matthew Logan</a></h1>
-        <a href="#hero" class="navOpt" id="navTop">Top</a>
-        <a href="#aboutMain" class="navOpt" id="navAbout">About</a>
-        <a href="#projects" class="navOpt" id="navProj">Projects</a>
-        <a href="#contact" class="navOpt" id="navContact">Contact</a>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" data-toggle-content="0C994">
+        <div class="menu">
+          <a href="#hero" class="navOpt" id="navTop">Top</a>
+          <a href="#aboutMain" class="navOpt" id="navAbout">About</a>
+          <a href="#projects" class="navOpt" id="navProj">Projects</a>
+          <a href="#contact" class="navOpt" id="navContact">Contact</a>
+        </div>
       </div>
       <div id="timeBox">
         <div><p id="location"></p></div>
         <div><p id="temp"></p></div>
         <div id="icon"></div>
         <p id="time"></p>
-        </div>
       </div>
+    </div>
       <!-- Hero Section  -->
     <div id="hero" class="hero full pt">
-      <div id="heroContent">
-        <h1 id="heroHeader">Matthew Logan</h1>
+      <div id="heroContent" class="bb bgg" >
+        <h1>Matthew Logan</h1>
         <p id="hook">A Portfolio Experience</p>
+        <p class="mobile">**Best viewed on PC</p>
       </div>
     </div>
     <!-- About Section, has three content boxes -->
-    <div id="aboutMain" class="about pt">
+    <div id="aboutMain" class="about full pt">
         <h1 class="bgg bb">About Me</h1>
       <div id="aboutSection">
           <!--Main content box-->
@@ -56,7 +61,7 @@
           <!--Reserved for Headshot + caption-->
           <div class="top bgg bb">
             <div id="headshot">
-              <img src="images/myself.webp" height="500" alt="Fill Murray">
+              <!-- <img src="images/myself.webp" alt="Fill Murray"> -->
             </div>
               <p id="aboutCaption">Fill Murray Baby</p>
           </div>
@@ -69,15 +74,15 @@
     </div>
     <!-- End of About Section -->
     <!-- Start of Projects Section -->
-    <div id="projects" class="pt">
+    <div id="projects" class="pt full">
       <h1 class="bgg bb projectTitle">Projects!</h1>
       <div id="projectsBody"></div>   
     </div>
     <!-- End of Projects Section -->
     <!-- Start of Contact Section -->
-    <div id="contact" class="pt">
-      <h1 class="bb">Contact Me</h1>
-      <div id="contactBody" class="bb">
+    <div id="contact" class="pt full">
+      <h1 class="bb bgg">Contact Me</h1>
+      <div id="contactBody" class="bb bgg">
         <div id="contactSquare" class="square"></div>
         <div id="socialLinks">
           <a rel="external" id="resumeAttach"><i class="bi bi-file-earmark-person"></i><span class="link"> Resume</span></a>
@@ -107,8 +112,6 @@
             <h1 class="modalProjectTitle">Hello World</h1>
             <p class="modalProjectSkills">Skills: Always ultimate skincare wipes</p>
         </div>
-
-
         <div id="modalRight">
           <div>
             <p class="modalDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar lorem sit amet erat mattis venenatis. Aenean varius sodales nunc, non porta dolor tristique dapibus. Aenean gravida commodo est a suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lacinia mauris lectus, vitae egestas nisi ullamcorper non. Fusce id dapibus odio. Sed laoreet massa ac dapibus semper. Mauris finibus suscipit ipsum, eu scelerisque tellus faucibus in. Ut mollis ultrices elit, molestie tristique arcu sollicitudin quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit tortor nec iaculis suscipit.</p>
@@ -118,8 +121,6 @@
             <a id="modalGit" class="modalLink">Github</a>
           </div>
         </div>
-        
-
       </div>
     </div>
   </div>

@@ -20,7 +20,7 @@
         {
             id: "blackjack",
             title: "BlackJack",
-            sourceImage: "images/BlackJack.png",
+            sourceImage: "images/projectImg/BlackJack.png",
             description: "",
             writeUp: {            
                 url: "https://localnewstv.github.io/BlackJack",
@@ -32,7 +32,7 @@
         {
             id: "weatherApp",
             title: "Weather Application",
-            sourceImage: "images/WeatherApp.png",
+            sourceImage: "images/projectImg/WeatherApp.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/WeatherApp",
@@ -44,7 +44,7 @@
         {
             id: "fakeStore",
             title: "128 Final Project",
-            sourceImage: "images/128Final.png",
+            sourceImage: "images/projectImg/128Final.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/128Final-FakeStoreFront",
@@ -56,7 +56,7 @@
         {
             id: "browserCombat",
             title: "Browser Combat Simulator",
-            sourceImage: "images/CombatSimulator.png",
+            sourceImage: "images/projectImg/CombatSimulator.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/BrowserCombatSimulator",
@@ -68,7 +68,7 @@
         {
             id: "senseWeather",
             title: "Sense Hat Weather",
-            sourceImage: "images/piWeather.png",
+            sourceImage: "images/projectImg/piWeather.png",
             description: "",
             writeUp: {
                 url: "n/a",
@@ -80,7 +80,7 @@
         {
             id: "ticTacToe",
             title: "Tic Tac Toe",
-            sourceImage: "images/ttt.png",
+            sourceImage: "images/projectImg/ttt.png",
             description: "",
             writeUp: {
                 url: "https://localnewstv.github.io/TicTacToe",

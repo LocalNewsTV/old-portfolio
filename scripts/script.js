@@ -55,7 +55,7 @@ const projectCardMaker = (project) => {
  * @description - Appends information of a given type to the modal
 ********************************************************************************/
 const showProject = (projectObj) => {
-    $('#myModal').css("display","block");
+    $('#myModal').css("display","flex");
     $('.modalDescription').html(projectObj.writeUp.summary);
     $('.modalProjectSkills').html(projectObj.writeUp.tools);
     $('.modalProjectTitle').html(projectObj.title);
@@ -133,8 +133,6 @@ const setBackground = () => {
     if(parseInt(window.innerWidth) > pixelWidth){
         $('#background-video').css('background', 'url(images/bgVid.m4v)')
         $('#background-video').attr("src", 'images/bgVid.m4v')
-        $('.about').css('background-image', 'url(images/background3.jpg)');
-        $('#contact').css('background-image', 'url(images/background2.webp)')
     }
 }
 
@@ -168,5 +166,18 @@ $('.projectTitle').on("click", () => {
     let bgColor = $('.projectCard').css('display') == 'block'? "green" : ''; 
     $('.projectCard').css('display', set);
     $('.projectTitle').css('background-color', bgColor)
+});
+
+$(window).resize(()=>{
+    pixelWidth = 500;
+    background = $('#background-video').css('background') == 'url(images/bgVid.m4v)' ? true : false; 
+    if(parseInt(window.innerWidth) > pixelWidth && !background){
+        $('#background-video').css('background', 'url(images/bgVid.m4v)')
+        $('#background-video').attr("src", 'images/bgVid.m4v')
+    }
+    else if(parseInt(window.innerWidth) < pixelWidth && background){
+        $('#background-video').css('background', '');
+        $('#background-video').removeAttr('src');
+    }
 });
 

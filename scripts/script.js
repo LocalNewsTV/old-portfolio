@@ -199,5 +199,5 @@ $('.projectTitle').on("click", () => {
     let set = $('.projectCard').css('display') == 'block' ? "none" : 'block';
     let bgColor = $('.projectCard').css('display') == 'block'? "green" : ''; 
     $('.projectCard').css('display', set);
-    $('.projectTitle').css('background-color', bgColor)
+    $('.projectTitle').css('background-color', bgColor);
 });

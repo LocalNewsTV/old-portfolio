@@ -16,6 +16,7 @@ const projectCardMaker = (project) => {
     $(imageContainer).addClass('imgCont')
     const cardImage = newE('img');
     cardImage.src = project.sourceImage;
+    cardImage.alt = project.description;
     $(imageContainer).append(cardImage);
     $(card).append(imageContainer)
 
@@ -28,7 +29,7 @@ const projectCardMaker = (project) => {
     $(cardBody).append(cardTitle);
 
     const cardText = newE('p');
-    $(cardText).html(project.description);
+    $(cardText).html('');
     $(cardBody).append(cardText);
 
     const button = newE('button');
@@ -51,11 +52,11 @@ const showProject = (projectObj) => {
     $('.modalProjectSkills').html(projectObj.writeUp.tools);
     $('.modalProjectTitle').html(projectObj.title);
     $('.modalImageContainer').css('background-image',`url('${projectObj.sourceImage}')`);
+    $('body').css('overflow', 'hidden');
     if(projectObj.writeUp.url == 'n/a'){
         $('#modalDemo').removeAttr('href');
         $('#modalDemo').addClass('noLink');
-    }
-    else{
+    } else {
         $('#modalDemo').attr('href', projectObj.writeUp.url);
         $('#modalDemo').removeClass('noLink');
     }
@@ -67,8 +68,7 @@ const showProject = (projectObj) => {
 const startNavBarTime = () => {
     const theTime = () => {
         const date = new Date();
-        const option = { timeZone: contact.timeZone, timeZoneName: 'short'}
-        $('#time').html(date.toLocaleTimeString('en-US', option));
+        $('#time').html(date.toLocaleTimeString('en-US', contact.timeZone));
     }
     theTime();
     setInterval(theTime, 1000);
@@ -112,7 +112,7 @@ const updateWeather = () => {
         const weather = await getWeather();
         if(weather != ""){
             const image = newE('img')
-            image.src = 'http:' + weather.current.condition.icon;
+            image.src = 'https:' + weather.current.condition.icon;
             $('#temp').html(weather.current.temp_c + '°C');
             $('#icon').html(image)
         }
@@ -121,14 +121,6 @@ const updateWeather = () => {
     $('#location').html(contact.location + ': ')
     fillWeatherInfo();
     setInterval(fillWeatherInfo, fiveMinutes);
-}
-//Sets initial Background
-const setBackground = () => {
-    pixelWidth = 900;
-    if(parseInt(window.innerWidth) > pixelWidth){
-        $('#background-video').css('background', 'url(images/bgVid.m4v)')
-        $('#background-video').attr("src", 'images/bgVid.m4v')
-    }
 }
 //Small easter Egg, clicking the red square in Contact Me turns it into a circle (or back to a Square)
 const circle = () => {
@@ -154,15 +146,16 @@ $(document).ready(()=>{
     addAboutContent();
     loadProjects();
     startNavBarTime();
-    setBackground();
 });
 /*******************************************************************************
- * @description Functionality to remove Modal
+ * @description Functionality to remove Modal and turn scroll back on
  ******************************************************************************/
 $('.close').on("click",()=>{$('#myModal').fadeOut(600)})
 $(window).on("click", function(event) {
-    if (event.target.id == 'myModal')
+    if (event.target.id == 'myModal'){
         $('#myModal').fadeOut(500);
+        $('body').css('overflow', '');
+    }
 });
 
 /******************************************************************************* 

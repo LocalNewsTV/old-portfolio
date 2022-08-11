@@ -29,7 +29,7 @@ body, html {
     left: 0;
     z-index: -2;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     background-color:darkcyan;
     background-image: url(../images/mobileBg.webp);
     background-size: fill;
@@ -245,7 +245,7 @@ footer {
     display: flex;
     flex-direction: row;
     background: slategray;
-    width: 100vw;
+    width: 100%;
     height: auto;
     border-top: 1px solid black;
     justify-content: center;
@@ -382,13 +382,10 @@ footer {
     Media query for non-cell phones
 *************************************/
 @media only screen and (min-width: 900px) {
-    body,
-    html { overflow: hidden; }
     .full { flex-direction: row; }
     label { display: none }
     #background {
         display: flex;
-
     }
     #background-video { 
         display: flex;
@@ -452,7 +449,7 @@ footer {
     /*************************************
         About Section (PC)
     *************************************/
-    #aboutMain{ width: 100vw;}
+    #aboutMain{ width: 100%;}
     .about{
         flex-direction: column;
         background-image: url(../images/background3.jpg);
@@ -520,7 +517,7 @@ footer {
     /***************************************************
         Modal Section (PC)
     ***************************************************/
-    .modalImage, .modalImageContainer { display: block; }
+    .modalImage, .modalImageContainer { display: block; overflow: hidden; }
     .modal { align-items: center; justify-content: center;}
     .modal-content{ 
         width: 900px;  

@@ -9,7 +9,7 @@ const contact = {
     linkedin: "https://www.linkedin.com/in/logan-matthew/",
     email: "loganmatthewdev@gmail.com",
     location: "YYJ",
-    timeZone: "PST",
+    timeZone: "PDT",
 }
 const aboutMe = {
     aboutIntro: `My name is Matthew and in the past I was a chef of 8 years with red seal certification.<br> 

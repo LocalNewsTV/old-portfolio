@@ -36,7 +36,7 @@
             id: "weatherApp",
             title: "Weather Application",
             sourceImage: "images/projectImg/WeatherApp.png",
-            description: "",
+            description: "Weather Application",
             writeUp: {
                 url: "https://localnewstv.github.io/WeatherApp",
                 github: "https://github.com/LocalNewsTV/WeatherApp",
@@ -48,7 +48,7 @@
             id: "senseWeather",
             title: "Sense Hat Weather",
             sourceImage: "images/projectImg/piWeather.png",
-            description: "",
+            description: "Python Script for Sense Weather",
             writeUp: {
                 url: "n/a",
                 github: "https://github.com/LocalNewsTV/HomeTemp",
@@ -60,7 +60,7 @@
             id: "fakeStore",
             title: "128 Final Project",
             sourceImage: "images/projectImg/128Final.png",
-            description: "",
+            description: "Thumbnail or Final Project",
             writeUp: {
                 url: "https://localnewstv.github.io/128Final-FakeStoreFront",
                 github: "https://github.com/LocalNewsTV/128Final-FakeStoreFront",
@@ -72,7 +72,7 @@
             id: "browserCombat",
             title: "Browser Combat Simulator",
             sourceImage: "images/projectImg/CombatSimulator.png",
-            description: "",
+            description: "Thumbnail for Browser Combat Simulator",
             writeUp: {
                 url: "https://localnewstv.github.io/BrowserCombatSimulator",
                 github: "https://github.com/LocalNewsTV/BrowserCombatSimulator",
@@ -84,7 +84,7 @@
             id: "ticTacToe",
             title: "Tic Tac Toe",
             sourceImage: "images/projectImg/ttt.png",
-            description: "",
+            description: "Thumbnail for Tic Tac Toe",
             writeUp: {
                 url: "https://localnewstv.github.io/TicTacToe",
                 github: "https://github.com/LocalNewsTV/TicTacToe",
@@ -96,7 +96,7 @@
             id: "nierAutomata",
             title: "Nier Automata Fanpage",
             sourceImage: "images/projectImg/nierAutomata.png",
-            description: "",
+            description: "Thumbnail for Nier Fanpage",
                 writeUp: {
                     url: "https://localnewstv.github.io/Single-Page-Fanpage/",
                     github: "https://github.com/LocalNewsTV/Single-Page-Fanpage/",

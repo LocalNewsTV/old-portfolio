@@ -122,12 +122,22 @@ label{
 }
 .top, .bottom {
     display: flex;
+    padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-#headshot, 
+#headshot {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    object-fit: fill;
+    overflow: hidden;
+}
+#headshot img{
+    border: 1px solid black;
+}
 .modalImage{display: none;}
 
 /***************************************************
@@ -226,6 +236,7 @@ button:hover {
     justify-content: flex-end;
 }
 .link { font-size: 14px;}
+.link:hover {color: royalblue;}
 /*************************************
     Footer Section (Mobile)
 **************************************/
@@ -397,8 +408,10 @@ footer {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
     }
+    
     #headshot {
-        display: block;
+        display: flex;
+        justify-content: center;
         height: 500px;
         width: 100%;
         object-fit: fill;

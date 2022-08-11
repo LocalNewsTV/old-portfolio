@@ -1,13 +1,4 @@
 newE = (type) => document.createElement(type);
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 /******************************************************************************* 
  * @param {Object} project - Object containing the information for each project  
  * @return {Object} - returns card object to append to the Dom
@@ -100,7 +91,10 @@ const setContacts = () => {
     $('#emailadd').attr('href', `mailto:${contact.email}`);
     // $('#resumeAttach').attr('href', 'docs/resume.pdf');
 }
-
+/*******************************************************************************
+ * @description - Gets the weather information from API Call and populates it to
+ * the navbar, runs 5 minute interval to keep information updated.
+ *******************************************************************************/
 const updateWeather = () => {
     const fillWeatherInfo = async () => {
         const getWeather = async () => {
@@ -128,50 +122,67 @@ const updateWeather = () => {
     fillWeatherInfo();
     setInterval(fillWeatherInfo, fiveMinutes);
 }
+//Sets initial Background
 const setBackground = () => {
-    pixelWidth = 500
+    pixelWidth = 900;
     if(parseInt(window.innerWidth) > pixelWidth){
         $('#background-video').css('background', 'url(images/bgVid.m4v)')
         $('#background-video').attr("src", 'images/bgVid.m4v')
     }
 }
-
+//Small easter Egg, clicking the red square in Contact Me turns it into a circle (or back to a Square)
 const circle = () => {
     const border = $('#contactSquare').css('border-radius');
     let size;
     size = border == "50px" ? size = 0 : size = 50;
     $('#contactSquare').css("border-radius", size);
 }
+//Populates the About Me Section
+const addAboutContent = () => {
+    $('#aboutIntro').html(aboutMe.aboutIntro);
+    $('#aboutImmersion').html(aboutMe.aboutImmersion);
+    $('#aboutHobbies').html(aboutMe.aboutHobbies);
+    $('#aboutMuse').html(aboutMe.aboutMuse);
+    $('#aboutCaption').html(aboutMe.aboutCaption);
+}
 /******************************************************************************* 
- * 
+ * @description Document Ready function that calls everything needed to fill in the content and run API calls
 ********************************************************************************/
 $(document).ready(()=>{
     updateWeather();
     setContacts();
+    addAboutContent();
     loadProjects();
     startNavBarTime();
     setBackground();
 });
-
+/*******************************************************************************
+ * @description Functionality to remove Modal
+ ******************************************************************************/
 $('.close').on("click",()=>{$('#myModal').css("display", "none")})
-
 $(window).on("click", function(event) {
     if (event.target.id == 'myModal')
         $('#myModal').css("display", "none");
 });
 
-$('#contactSquare').on("click", circle);
-$('.projectTitle').on("click", () => {
-    let set = $('.projectCard').css('display') == 'block' ? "none" : 'block';
-    let bgColor = $('.projectCard').css('display') == 'block'? "green" : ''; 
-    $('.projectCard').css('display', set);
-    $('.projectTitle').css('background-color', bgColor)
+/******************************************************************************* 
+ * Event Listeners / Anonymous Functions
+********************************************************************************/
+/** @description - Smooth scrolling functionality */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
+/** @description - Resize event that will Render in / Remove the Alexandra Falls video depending on size of viewports */ 
 $(window).resize(()=>{
-    pixelWidth = 500;
+    pixelWidth = 900;
     background = $('#background-video').css('background') == 'url(images/bgVid.m4v)' ? true : false; 
-    if(parseInt(window.innerWidth) > pixelWidth && !background){
+    if(parseInt(window.innerWidth) >= pixelWidth && !background){
         $('#background-video').css('background', 'url(images/bgVid.m4v)')
         $('#background-video').attr("src", 'images/bgVid.m4v')
     }
@@ -181,3 +192,12 @@ $(window).resize(()=>{
     }
 });
 
+$('#contactSquare').on("click", circle);
+
+/** @description - Makes Project Cards Disappear to reveal the Alexandra Falls video */
+$('.projectTitle').on("click", () => {
+    let set = $('.projectCard').css('display') == 'block' ? "none" : 'block';
+    let bgColor = $('.projectCard').css('display') == 'block'? "green" : ''; 
+    $('.projectCard').css('display', set);
+    $('.projectTitle').css('background-color', bgColor)
+});

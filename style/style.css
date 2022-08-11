@@ -279,7 +279,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid black;
-    width: 300px; /* Could be more or less, depending on screen size */
+    width: 100%; /* Could be more or less, depending on screen size */
 }
 .modalContent h1
 .modalDescription {

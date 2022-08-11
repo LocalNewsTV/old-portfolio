@@ -53,7 +53,7 @@
                 url: "n/a",
                 github: "https://github.com/LocalNewsTV/HomeTemp",
                 tools: "Python, Raspberry Pi, Sense Hat",
-                summary: ``
+                summary: `Small Script that goes off on 15 minute intervals between designated 'safe hours', the script relays the current Weather outdoors, and the humidity in the room and displays them onto the 8x8px SenseHat LED board`
             }
         },
         {

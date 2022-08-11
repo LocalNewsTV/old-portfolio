@@ -50,7 +50,7 @@ const showProject = (projectObj) => {
     $('.modalDescription').html(projectObj.writeUp.summary);
     $('.modalProjectSkills').html(projectObj.writeUp.tools);
     $('.modalProjectTitle').html(projectObj.title);
-    $('.modalImage').attr('src',projectObj.sourceImage)
+    $('.modalImageContainer').css('background-image',`url('${projectObj.sourceImage}')`);
     if(projectObj.writeUp.url == 'n/a'){
         $('#modalDemo').removeAttr('href');
         $('#modalDemo').addClass('noLink');

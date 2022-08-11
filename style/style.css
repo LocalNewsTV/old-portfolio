@@ -320,8 +320,7 @@ footer {
     background-color: rgba(15, 15, 15, .85);
     border: 1px solid black;
 }
-.modalDescription:hover,
-.modalLeftText:hover { background-color: rgba(55, 0, 0, 1)}
+
 #modalLeft,
 #modalRight {
     display: flex;
@@ -528,6 +527,8 @@ footer {
     }
     #modalLeft h1 { margin-top: 15px; }
     #modalLeft { justify-content: flex-start;}
+    .modalDescription:hover,
+    .modalLeftText:hover { background-color: rgba(55, 0, 0, 1)}
     /***************************************************
         Scrollbar CSS
     ***************************************************/

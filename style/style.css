@@ -275,8 +275,18 @@ footer {
     margin: 5px auto; /* 5px from the top and centered */
     min-height: 85%;
     padding: 5px;
+    background-image: url(../images/modalBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 1px solid black;
     width: 300px; /* Could be more or less, depending on screen size */
+}
+.modalContent h1
+.modalDescription {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: crimson;
+    color: black;
 }
 .close { /*Modal Close Button*/
     color: #aaa;
@@ -291,11 +301,27 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.modalMain h1 { 
+.modalLeftText h1 { 
     font-size: 20px;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
 }
+.modalLeftText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(55, 0, 0, .8);
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
+}
+.modalDescription {
+    padding: 10px;
+    background-color: rgba(55, 0, 0, .8);
+    border: 1px solid black;
+}
+.modalDescription:hover,
+.modalLeftText:hover { background-color: rgba(55, 0, 0, 1)}
 #modalLeft,
 #modalRight {
     display: flex;
@@ -312,7 +338,7 @@ footer {
     color: white;
     font-size: 1.5rem;
     margin: 5px;
-    background-color: forestgreen;
+    background-color: #404040;
 }
 .modalLink:hover {
     background: white;

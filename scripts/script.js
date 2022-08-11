@@ -159,10 +159,10 @@ $(document).ready(()=>{
 /*******************************************************************************
  * @description Functionality to remove Modal
  ******************************************************************************/
-$('.close').on("click",()=>{$('#myModal').css("display", "none")})
+$('.close').on("click",()=>{$('#myModal').fadeOut(600)})
 $(window).on("click", function(event) {
     if (event.target.id == 'myModal')
-        $('#myModal').css("display", "none");
+        $('#myModal').fadeOut(500);
 });
 
 /******************************************************************************* 

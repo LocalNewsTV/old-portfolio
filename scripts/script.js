@@ -53,6 +53,18 @@ const showProject = (projectObj) => {
     $('.modalProjectTitle').html(projectObj.title);
     $('.modalImageContainer').css('background-image',`url('${projectObj.sourceImage}')`);
     $('body').css('overflow', 'hidden');
+    const demo = newE('a');
+    demo.id = 'modalDemo';
+    demo.rel = 'next';
+    $(demo).addClass('modalLink');
+    $(demo).html('Demo')
+    const git = newE('a');
+    git.id = 'modalGit';
+    git.rel = 'external';
+    $(git).addClass('modalLink');
+    $(git).html('Github');
+    $('.modalButtonCont').html('');
+    $('.modalButtonCont').append(demo, git);
     if(projectObj.writeUp.url == 'n/a'){
         $('#modalDemo').removeAttr('href');
         $('#modalDemo').addClass('noLink');
@@ -89,7 +101,7 @@ const setContacts = () => {
     $('#github').attr('href', contact.github);
     $('#linkedin').attr('href', contact.linkedin);
     $('#emailadd').attr('href', `mailto:${contact.email}`);
-    // $('#resumeAttach').attr('href', 'docs/resume.pdf');
+    $('#resumeAttach').attr('href', 'docs/resume.pdf');
 }
 /*******************************************************************************
  * @description - Gets the weather information from API Call and populates it to
@@ -113,6 +125,7 @@ const updateWeather = () => {
         if(weather != ""){
             const image = newE('img')
             image.src = 'https:' + weather.current.condition.icon;
+            image.alt = weather.current.condition.text;
             $('#temp').html(weather.current.temp_c + '°C');
             $('#icon').html(image)
         }

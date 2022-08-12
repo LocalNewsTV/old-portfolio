@@ -276,7 +276,7 @@ footer {
     margin: 5px auto; /* 5px from the top and centered */
     min-height: 85%;
     padding: 5px;
-    background-image: url(../images/modalBg.jpg);
+    background-image: url(../images/modalBg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid black;
@@ -437,7 +437,7 @@ footer {
     *************************************/
     #hero{
         background-color: darkslategray;
-        background-image: url(../images/background.jpg);
+        background-image: url(../images/background.webp);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -452,7 +452,7 @@ footer {
     #aboutMain{ width: 100%;}
     .about{
         flex-direction: column;
-        background-image: url(../images/background3.jpg);
+        background-image: url(../images/background3.webp);
         background-size: cover;
         background-repeat: no-repeat;
         border-top: 1px solid black;

@@ -22,7 +22,7 @@
         {
             id: "blackjack",
             title: "BlackJack",
-            sourceImage: "images/projectImg/BlackJack.png",
+            sourceImage: "images/projectImg/BlackJack.webp",
             description: "",
             writeUp: {            
                 url: "https://localnewstv.github.io/BlackJack",
@@ -35,7 +35,7 @@
         {
             id: "weatherApp",
             title: "Weather Application",
-            sourceImage: "images/projectImg/WeatherApp.png",
+            sourceImage: "images/projectImg/WeatherApp.webp",
             description: "Weather Application",
             writeUp: {
                 url: "https://localnewstv.github.io/WeatherApp",
@@ -47,7 +47,7 @@
         {
             id: "senseWeather",
             title: "Sense Hat Weather",
-            sourceImage: "images/projectImg/piWeather.png",
+            sourceImage: "images/projectImg/piWeather.webp",
             description: "Python Script for Sense Weather",
             writeUp: {
                 url: "n/a",
@@ -59,7 +59,7 @@
         {
             id: "fakeStore",
             title: "128 Final Project",
-            sourceImage: "images/projectImg/128Final.png",
+            sourceImage: "images/projectImg/128Final.webp",
             description: "Thumbnail or Final Project",
             writeUp: {
                 url: "https://localnewstv.github.io/128Final-FakeStoreFront",
@@ -71,7 +71,7 @@
         {
             id: "browserCombat",
             title: "Browser Combat Simulator",
-            sourceImage: "images/projectImg/CombatSimulator.png",
+            sourceImage: "images/projectImg/CombatSimulator.webp",
             description: "Thumbnail for Browser Combat Simulator",
             writeUp: {
                 url: "https://localnewstv.github.io/BrowserCombatSimulator",
@@ -83,7 +83,7 @@
         {
             id: "ticTacToe",
             title: "Tic Tac Toe",
-            sourceImage: "images/projectImg/ttt.png",
+            sourceImage: "images/projectImg/ttt.webp",
             description: "Thumbnail for Tic Tac Toe",
             writeUp: {
                 url: "https://localnewstv.github.io/TicTacToe",
@@ -95,7 +95,7 @@
         {
             id: "nierAutomata",
             title: "Nier Automata Fanpage",
-            sourceImage: "images/projectImg/nierAutomata.png",
+            sourceImage: "images/projectImg/nierAutomata.webp",
             description: "Thumbnail for Nier Fanpage",
                 writeUp: {
                     url: "https://localnewstv.github.io/Single-Page-Fanpage/",

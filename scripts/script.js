@@ -163,7 +163,10 @@ $(document).ready(()=>{
 /*******************************************************************************
  * @description Functionality to remove Modal and turn scroll back on
  ******************************************************************************/
-$('.close').on("click",()=>{$('#myModal').fadeOut(600)})
+$('.close').on("click",()=>{
+    $('#myModal').fadeOut(600)
+    $('body').css('overflow', '');
+});
 $(window).on("click", function(event) {
     if (event.target.id == 'myModal'){
         $('#myModal').fadeOut(500);

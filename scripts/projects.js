@@ -22,7 +22,7 @@
         {
             id: "pokeHelper",
             title: "Pokemon Weakness Helper",
-            sourceImage: "images/projectImg/PokeHelper",
+            sourceImage: "images/projectImg/PokeHelper.webp",
             description: "",
                 writeUp: {
                     url: "https://localnewstv.github.io/PokeHelper",

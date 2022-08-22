@@ -20,6 +20,18 @@
  */
     projects = [
         {
+            id: "pokeHelper",
+            title: "Pokemon Weakness Helper",
+            sourceImage: "images/projectImg/PokeHelper",
+            description: "",
+                writeUp: {
+                    url: "https://localnewstv.github.io/PokeHelper",
+                    github: "https://github.com/LocalNewsTV/PokeHelper",
+                    tools: "JS, jQuery, HTML, CSS",
+                    summary: "Suitable for parents or those who havent played in a long time, using the PokeAPI this app charts type effectiveness so you can always make your attacks supereffective"
+                },
+        },
+        {
             id: "blackjack",
             title: "BlackJack",
             sourceImage: "images/projectImg/BlackJack.webp",

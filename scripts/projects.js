@@ -20,6 +20,18 @@
  */
     projects = [
         {
+            id: "passwordGenerator",
+            title: "Password Generator",
+            sourceImage: "images/projectImg/PasswordGenerator.webp",
+            description: "Javascript class for scrambling passwords",
+                writeUp: {
+                    url: "https://localnewstv.github.io/PasswordGenerator",
+                    github: "https://github.com/LocalNewsTV/PasswordGenerator",
+                    tools: "ES6 Classes, HTML, CSS",
+                    summary: "A simple tool for people to use stronger passwords while remembering weaker versions. Application can help those with weak passwords avoid becoming victims of brute forcing attacks. This class can be imported or used in other programs. A simple web page was created to demonstrate functionality. You can remember 'Password1' but use 'P2hBJLd$K'"
+                },
+        },
+        {
             id: "pokeHelper",
             title: "Pokemon Weakness Helper",
             sourceImage: "images/projectImg/PokeHelper.webp",
